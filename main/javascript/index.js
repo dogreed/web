@@ -4,5 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     navToggle.addEventListener('click', function() {
         nav.classList.toggle('active');
+        
+        // Toggle between hamburger and cross
+        if (nav.classList.contains('active')) {
+            navToggle.textContent = '✖';
+        } else {
+            navToggle.textContent = '☰';
+        }
     });
 });

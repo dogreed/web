@@ -1,10 +1,18 @@
 /* General styles */
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
     background-color: white;
     color: black;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, .Skills, footer {
+    width: 100%;
 }
 
 /* Header styles */
@@ -53,8 +61,6 @@ body {
     z-index: 10;
 }
 
-
-
 /* Footer styles */
 .footer {
     display: flex;
@@ -63,6 +69,7 @@ body {
     flex-direction: column;
     padding: 20px;
     background-color: rgb(51, 52, 55);
+    margin-top: auto; /* Pushes footer to the bottom */
 }
 
 .xy {
@@ -81,66 +88,44 @@ body {
     transform: scale(1.4);
     color: rgb(20, 186, 47);
 }
-.contact-form-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 100vh; 
-    background-color: #f4f4f4; 
-    margin: 0;
-}
 
-.contact-form {
-    background-color: #fff; 
-    border: 2px solid #ddd; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    padding: 20px; 
-    width: 100%;
-    max-width: 600px; 
-    box-sizing: border-box; 
-}
-
-.contact-form h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.form-group textarea {
-    resize: vertical; /* increase decrease */
-}
-
-button.abc {
-    background-color: #007BFF; 
-    color: #fff; 
-    border: none;
-    border-radius: 4px;
+/* Button styles */
+button {
     padding: 10px 20px;
     font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%; 
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-button.abc:hover {
-    background-color: #04aa28; 
+button:hover {
+    background-color: rgb(28, 4, 165);
+    transform: scale(1.05);
+}
+
+.Skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns grid for desktop */
+    gap: 50px; /* Space between boxes */
+    padding: 50px;
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    box-sizing: border-box;
+}
+.Skills > div {
+    background-color: #e6d1d1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 200px;
 }
 
 
@@ -186,4 +171,28 @@ button.abc:hover {
         align-items: center;
     }
 
+    .Skills {
+        grid-template-columns: 1fr; /* Single column layout for mobile */
+        gap: 15px; /* Space between boxes */
+        padding: 20px;
+        justify-items: center; /* Center items horizontally */
+        align-items: center; /* Center items vertically */
+    }
+
+    .Skills > div {
+        background-color: #e6d1d1;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px; /* Limit width of each box */
+    }
 }
+
+    .footer {
+        padding: 20px;
+    }
+

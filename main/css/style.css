@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: white;
     color: black;
+    line-height: 1.6;
 }
 
 /* Header styles */
@@ -15,10 +16,11 @@ body {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
+    flex-wrap: wrap;
 }
 
 .logo img {
-    width: 100px; 
+    width: 100px;
 }
 
 .nav ul {
@@ -27,15 +29,7 @@ body {
     padding: 0;
     display: flex;
 }
-.nav-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    right: 12%;
-    transform: translateX(-70%);
-    z-index:12;
-}
+
 .nav li {
     margin-left: 20px;
 }
@@ -55,13 +49,97 @@ body {
     display: none;
     font-size: 24px;
     cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+/* Middle section styles */
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+}
+
+.introduction {
+    flex: 1;
+    text-align: right; /* User's right in desktop view */
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: 15px; /* Space between text and image */
+}
+
+.introduction h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.introduction p {
+    margin-bottom: 10px;
+}
+
+.picture {
+    flex: 1;
+    text-align: left; /* User's left in desktop view */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.picture img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.footer{
+    display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ padding: 20px;
+background-color: rgb(51, 52, 55);
+
+ }
+.xy {
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    color:aliceblue; 
+
+    border-radius: 50px;
+}
+.xy i {
+    transition: all 0.3s linear;
+}
+.xy:hover i{
+    transform: scale(1.4);
+    color: rgb(20, 186, 47);
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px; 
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: rgb(28, 4, 165);
+    transform: scale(1.05); /* Slight scale effect on hover */
 }
 
 /* Media queries */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .nav {
@@ -72,6 +150,8 @@ body {
     .nav ul {
         flex-direction: column;
         width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .nav li {
@@ -86,9 +166,42 @@ body {
 
     .nav-toggle {
         display: block;
+        margin-top: 10px;
+        font-size: 24px;
+        cursor: pointer;
     }
 
     .nav.active {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Middle section adjustments for smaller screens */
+    .middle {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .introduction {
+        text-align: center;
+        margin: 0; /* Text below the image */
+        font-size: 20px;
+    }
+
+    .introduction h1 {
+        font-size: 28px;
+    }
+    .footer{
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgb(51, 52, 55);
+   
+
     }
 }
