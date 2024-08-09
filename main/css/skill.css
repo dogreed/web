@@ -117,8 +117,9 @@ button:hover {
     align-items: center; /* Center items vertically */
     box-sizing: border-box;
 }
+
 .Skills > div {
-    background-color: #e6d1d1;
+    background-color: #effae8;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
