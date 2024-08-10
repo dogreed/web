@@ -41,7 +41,7 @@ body {
 }
 
 .nav a:hover {
-    color: #007BFF;
+    color: #33f6d2;
 }
 
 /* Toggle button styles */
@@ -84,7 +84,7 @@ body {
 .picture {
     flex: 1;
     text-align: left; /* User's left in desktop view */
-    margin-right: 20px; /* Space between image and text */
+    margin-right: 20px; 
 }
 
 .picture img {

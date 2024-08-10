@@ -41,7 +41,7 @@ body {
 }
 
 .nav a:hover {
-    color: #007BFF;
+    color: #33f6d2;
 }
 
 /* Toggle button styles */
@@ -134,7 +134,6 @@ body {
     transform: scale(1.05); /* Slight scale effect on hover */
 }
 
-/* Specific styles for the Download CV button */
 .downloaad a {
     text-decoration: none; /* Remove underline */
 }
